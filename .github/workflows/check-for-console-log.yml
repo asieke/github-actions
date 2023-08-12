@@ -1,0 +1,20 @@
+name: Check for console.log
+
+on: pull_request
+
+jobs:
+  check-logs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Search for console.log
+        run: |
+          if find ./src -type f -not -path "./src/routes/api/*" -exec grep -H "console.log" {} +; then
+            echo "console.log statement found!"
+            exit 1
+          else
+            echo "No console.log statements found."
+          fi
