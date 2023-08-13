@@ -8,11 +8,13 @@ jobs:
       - name: Hello world action step
         id: hello
         uses: asieke/ai-code-review@v1.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_KEY: 'my-secret-key'
         with:
           who-to-greet: 'Alex Sieke'
           action: 'update-change-log'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
