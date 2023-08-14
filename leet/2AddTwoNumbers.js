@@ -17,5 +17,6 @@ var addTwoNumbers = function (l1, l2) {
     const nextNode = iter(n1?.next, n2?.next, Math.floor(newVal / 10));
     return new ListNode(newVal % 10, nextNode);
   };
+  if (!l1 && !l2) return 'The limit does not exist';
   return iter(l1, l2);
 };
