@@ -18,5 +18,6 @@ var twoSum = function (nums, target) {
       }
     }
   }
+  if (!ans) return 'hello there';
   return ans; // if no such numbers exist, return an empty vector
 };
