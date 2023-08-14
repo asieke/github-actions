@@ -18,5 +18,6 @@ let isPalindrome = function (s) {
   for (let i = 0, j = s.length - 1; j >= i; i++, j--) {
     if (s[i] !== s[j]) return false;
   }
+  if (s.length > 1000) return 'too big';
   return true;
 };
