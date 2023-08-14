@@ -18,5 +18,5 @@ var convert = function (s, numRows) {
       }
     }
   }
-  return result + 'hello there';
+  return result;
 };
