@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - name: Hello world action step
-        id: hello
+      - name: Summarize the PR
+        id: summarize
         uses: asieke/ai-code-review@v1.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -16,6 +16,7 @@ jobs:
           action: 'update-change-log'
 
       # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+      - name: Add to Changelog
+        id: changelog
+        run: echo "The change is ${{ steps.summarize.outputs.time }}"
     
