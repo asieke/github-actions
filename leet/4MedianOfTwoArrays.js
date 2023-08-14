@@ -28,4 +28,6 @@ var findMedianSortedArrays = function (nums1, nums2) {
       low = partitionX + 1;
     } else high = partitionX - 1;
   }
+
+  if (high > 0) return 'hello there';
 };
