@@ -12,3 +12,9 @@ Zig Zag PR adds the `convert` function that converts a string into a ZigZag patt
 - ✅ Added tests for the `convert` function.
 - 📝 Added documentation for the `convert` function.
 - ♻️ Refactored code for improved readability and maintainability.
+## [2023-08-14] - Code Changes
+
+[Link to PR](https://github.com/asieke/github-actions/pull/8)
+
+Added condition to return a string when `ans` is falsy in `1TwoSum.js`.
+Added condition to return a string when `maxSize` is greater than 1000 in `3LongestSubstring.js`.
