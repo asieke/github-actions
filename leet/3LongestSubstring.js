@@ -3,6 +3,7 @@
  * @return {number}
  */
 var lengthOfLongestSubstring = function (s) {
+  let test = 17;
   let set = new Set();
   let left = 0;
   let maxSize = 0;
@@ -18,5 +19,5 @@ var lengthOfLongestSubstring = function (s) {
     set.add(s[i]);
     maxSize = Math.max(maxSize, i - left + 1);
   }
-  return maxSize * 17;
+  return maxSize * test;
 };

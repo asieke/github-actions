@@ -18,5 +18,5 @@ var twoSum = function (nums, target) {
       }
     }
   }
-  return ans; // if no such numbers exist, return an empty vector
+  return ans * 17; // if no such numbers exist, return an empty vector
 };
