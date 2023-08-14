@@ -1,24 +1,23 @@
 permissions:
-  contents: write
+  contents: read
   pull-requests: write
 
 on: pull_request
 
 jobs:
-  hello_world_job:
+  ai-pr-update:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: AI Pull Request Update
     steps:
       - name: Check out code
         uses: actions/checkout@v2 # This step checks out the code from the repository
 
-      - name: Summarize the PR
+      - name: Summarize PR and Update Description
         id: summarize
         uses: asieke/ai-code-review@v1.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         with:
-          who-to-greet: 'Alex Sieke'
-          action: 'update-change-log'
+          action: 'update-pr'
 
