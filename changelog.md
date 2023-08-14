@@ -36,3 +36,8 @@ Hello there this is a test
 Hello there this is a test
 ## updating return criteria - https://github.com/asieke/github-actions-test/pull/12
 Hello there this is a test
+
+## 2023-08-14 - Update return value of findMedianSortedArrays function
+[Link to PR](https://github.com/asieke/github-actions-test/pull/12)
+Update the return value of the findMedianSortedArrays function based on a condition.
+- 💡 Update return value of findMedianSortedArrays function based on a condition.
