@@ -26,11 +26,11 @@ jobs:
 
       # Use the output from the `hello` step
       - name: Add to Changelog
-        id: changelog
         run: |
           echo "${{ steps.summarize.outputs.changelog }}" >> changelog.md
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add changelog.md
-          git commit -m "Update changelog with recent changes"
-          git push
+
+      - name: Upload Changelog
+        uses: actions/upload-artifact@v2
+        with:
+          name: changelog
+          path: changelog.md
