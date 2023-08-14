@@ -1,9 +1,15 @@
-on: pull_request
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
 
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
     name: A job to say hello
+    if: "!contains(github.event.head_commit.message, 'Update changelog with recent changes')"
     steps:
       - name: Summarize the PR
         id: summarize
@@ -18,5 +24,11 @@ jobs:
       # Use the output from the `hello` step
       - name: Add to Changelog
         id: changelog
-        run: echo "The change is ${{ steps.summarize.outputs.changelog }}"
+        run: |
+          echo "${{ steps.summarize.outputs.changelog }}" >> changelog.md
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add changelog.md
+          git commit -m "Update changelog with recent changes"
+          git push
     
