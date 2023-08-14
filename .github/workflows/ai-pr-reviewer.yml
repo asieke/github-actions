@@ -18,5 +18,5 @@ jobs:
       # Use the output from the `hello` step
       - name: Add to Changelog
         id: changelog
-        run: echo "The change is ${{ steps.summarize.outputs.time }}"
+        run: echo "The change is ${{ steps.summarize.outputs.changelog }}"
     
