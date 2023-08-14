@@ -1,11 +1,19 @@
+name: Update Changelog on Main Merge
+
 permissions:
   contents: write
   pull-requests: read
 
-on: pull_request
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
 
 jobs:
   ai-pr-update:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     name: AI Pull Request Update
     steps:
