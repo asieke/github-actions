@@ -4,17 +4,23 @@ permissions:
   contents: write
   pull-requests: write
 
-on: pull_request
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
 
 jobs:
   ai-pr-update:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     name: AI Pull Request Update
     steps:
       - name: Check out code
         uses: actions/checkout@v2 # This step checks out the code from the repository
 
-      - name: Summarize PR and Update Description
+      - name: Summarize PR and Update ChangeLog
         id: summarize
         uses: asieke/ai-code-review@v1.1
         env:
