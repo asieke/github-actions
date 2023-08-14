@@ -18,3 +18,13 @@ Zig Zag PR adds the `convert` function that converts a string into a ZigZag patt
 
 Added condition to return a string when `ans` is falsy in `1TwoSum.js`.
 Added condition to return a string when `maxSize` is greater than 1000 in `3LongestSubstring.js`.
+
+## 2023-08-14 - Updating LeetCode Solutions
+
+[Link to PR](https://github.com/asieke/github-actions/pull/8)
+
+Updated three LeetCode solutions with additional conditions and error returns.
+
+- 👍 Added an additional condition to return 'hello there' if the result is empty in TwoSum.js.
+- 👍 Added a condition to return 'max is too big' if the maximum size is over 1000 in LongestSubstring.js.
+- 👍 Added a condition to return 'hello there' if high is greater than 0 in MedianOfTwoArrays.js.
