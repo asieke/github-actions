@@ -1,3 +1,5 @@
+name: Update PR with AI Description
+
 permissions:
   contents: read
   pull-requests: write
