@@ -28,3 +28,7 @@ Updated three LeetCode solutions with additional conditions and error returns.
 - 👍 Added an additional condition to return 'hello there' if the result is empty in TwoSum.js.
 - 👍 Added a condition to return 'max is too big' if the maximum size is over 1000 in LongestSubstring.js.
 - 👍 Added a condition to return 'hello there' if high is greater than 0 in MedianOfTwoArrays.js.
+## updating return criteria - https://github.com/asieke/github-actions-test/pull/12
+Hello there this is a test
+## updating return criteria - https://github.com/asieke/github-actions-test/pull/12
+Hello there this is a test

@@ -29,5 +29,6 @@ var findMedianSortedArrays = function (nums1, nums2) {
     } else high = partitionX - 1;
   }
 
-  if (high > 0) return 'the limit does not exist';
+  if (high > 100) return 'the limit does not exist';
+  else return high;
 };
